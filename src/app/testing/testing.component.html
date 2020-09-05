@@ -1,0 +1,110 @@
+<app-header></app-header>
+
+<section>
+  <div class="container">
+
+    <div class="card">
+     <div class="card-header">
+      <div class="card-title">
+        Application Form
+      </div>
+     </div>
+      <div class="card-body">
+        <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+
+
+          <div class="form row">
+            <div class="form-group col-6">
+              <div class="row">
+                <div class="col-3">
+                  <label for="">First Name</label>
+                </div>
+                <div class="col-4">
+                  <input type="text" name="firstName" class="formControl" formControlName="firstName"
+                  placeholder="Enter First Name">
+
+                </div>
+                <div class="text-danger" *ngIf="submitted && data.firstName.errors">
+               <div *ngIf="data.firstName.errors.required">   First NAme is required</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group col-6">
+              <div class="row">
+                <div class="col-3"><label for="">Last Name</label></div>
+                <div class="col-4">
+                  <input type="text" name="lastName" class="formControl" formControlName="lastName" placeholder="Enter Last Name">
+                </div>
+                <div *ngIf="submitted && data.lastName.errors" class="text-danger">
+                  <div *ngIf="data.lastName.errors.required">Last Name  is Required</div></div>
+              </div>
+
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-large btn-info" >Submit</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            Testing Control Statement
+          </div>
+
+        </div>
+        <div class="card-body">
+          <button class="btn btn-success btnA #btnColor1">show  course</button>
+          <button class="btn btn-danger btnB #btnColor2" >Remove Course</button>
+        </div>
+      <h2>Country Name</h2>
+
+     <ul>
+       <li *ngFor="let countryname of countryName">{{countryname}}</li>
+     </ul>
+
+      </div>
+
+
+      <!-- <div>
+        <img [src]="imagepath" alt="imagepath" height='900px'>
+      </div> -->
+    </div>
+    <!-- <div style="background-image: url('assets/image/doctor-1.jpg'); height:900px ; width:900px"></div> -->
+   <div>
+        <img [src]="student.imagepath"  />
+      </div>
+  </div>
+</section>
+<div class="container">
+  <div >{{counter}}</div> <br>
+<button class="btn btn-info btn-large"
+(click)= increment()>Increment</button>
+
+<br>
+
+<div>
+
+
+  <input ngModel name="username" placeholder="Enter your name">
+<div style="  height:20px">{{this.username}}</div>
+
+<br><br>
+
+<div>
+  <h2>{{title}}</h2>
+
+  <ul>
+    <li *ngFor="let course of courses">{{course}}</li>
+  </ul>
+  <button (click)="onAdd()">Add Course</button>
+  <button (click)="onRemove()"> Remove</button>
+</div>
+</div>
+
+
+
+
+
+<footer></footer>
