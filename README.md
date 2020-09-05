@@ -13,9 +13,9 @@
 8.update component class.
   
   ## For Addding multiple table we need to take care of following
-  1.Sorting- we need to define a template variable (#TableOneSort :matSort)
-  2.Paginator - we need to define a template variable (#TableOnePaginator: matPaginator
-  3.Filter -we have to define key with applyFilterOne for table A and For table B use diffrent key like applyFiltertwo
+  1.Sorting- we need to define a template variable (#TableOneSort :matSort).
+  2.Paginator - we need to define a template variable (#TableOnePaginator: matPaginator.
+  3.Filter -we have to define key with applyFilterOne for table A and For table B use diffrent key like applyFiltertwo.
 
 ## Development server
 
